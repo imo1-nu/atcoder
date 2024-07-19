@@ -1,0 +1,7 @@
+{
+    "name": "x",
+    "private":true,
+    "scripts": {
+        "s": "acc s main.c -- -l 4001"
+    }
+}
