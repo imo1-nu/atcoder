@@ -16,10 +16,12 @@ int main()
     vector<vector<vector<int>>> dp(n + 1, vector<vector<int>>(n + 1, vector<int>(x + 1, 1e5)));
     dp[0][0][0] = 0;
     for (int i = 1; i <= n; i++) {
+        dp[i][0][0] = 0;
         for (int j = 1; j <= i; j++) {
-            for (int k = 1; k <= x; k++) {
+            for (int k = 0; k <= x; k++) {
+                if (i > j) dp[i][j][k] = min(dp[i][j][k], dp[i - 1][j][k]);
                 if (k >= a[i - 1]) {
-                    dp[i][j][k] = min(dp[i - 1][j - 1][k - a[i - 1]] + a[i - 1], dp[i - 1][j][k]);
+                    dp[i][j][k] = min(dp[i][j][k], dp[i - 1][j - 1][k - a[i - 1]] + b[i - 1]);
                 }
             }
         }
