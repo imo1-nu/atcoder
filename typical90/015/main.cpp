@@ -13,4 +13,5 @@ int main()
     
     int N;
     cin >> N;
+    cout << "ok" << endl;
 }
