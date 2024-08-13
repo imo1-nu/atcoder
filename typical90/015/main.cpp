@@ -16,12 +16,11 @@ int main()
         P[i] = P[i - 1] * i;
     }
     
-    for (int i = 0; i < N; i++) {
+    for (int K = 1; K <= N; K++) {
         mint ans = 0;
-        for (int j = 1; j < (N - 1) / (i + 1) + 2; j++) {
-            ans += P[N - i * (j - 1)] / (P[N - i * (j - 1) - j] * P[j]);
+        for (int r = 1; r <= (N + K - 1) / K; r++) {
+            ans += P[N - (K - 1) * (r - 1)] / (P[N - (K - 1) * (r - 1) - r] * P[r]);
         }
         cout << ans.val() << endl;
     }
-    
 }
