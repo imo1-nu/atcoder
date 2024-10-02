@@ -7,20 +7,20 @@ int main()
     cin.tie(nullptr);
     ios_base::sync_with_stdio(false);
     
-    ll d, n;
-    cin >> d >> n;
-    vector<ll> lcnt(d + 1), rcnt(d + 1);
-    for (ll i = 0; i < n; i++) {
-        ll l, r;
+    int D, N;
+    cin >> D >> N;
+    vector<ll> T(D);
+    for (int i = 0; i < N; ++i) {
+        int l, r;
         cin >> l >> r;
-        lcnt[l]++;
-        rcnt[r]++;
-    }
-
-    vector<ll> dp(d + 1);
-    for (ll i = 0; i < d; i++) {
-        dp[i + 1] = dp[i] + lcnt[i + 1] - rcnt[i];
-        cout << dp[i + 1] << endl;
+        l--;
+        T[l]++;
+        T[r]--;
     }
     
+    vector<ll> S(D + 1);
+    for (int i = 1; i <= D; i++) {
+        S[i] = S[i - 1] + T[i - 1];
+        cout << S[i] << endl;
+    }
 }

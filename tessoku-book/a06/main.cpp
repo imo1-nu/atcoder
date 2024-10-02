@@ -7,27 +7,22 @@ int main()
     cin.tie(nullptr);
     ios_base::sync_with_stdio(false);
     
-    ll n, q;
-    cin >> n >> q;
-    vector<int> a(n), s(n + 1, 0);
-    for (ll i = 0; i < n; i++) {
-        cin >> a[i];
+    int N, Q;
+    cin >> N >> Q;
+    vector<int> A(N);
+    for (int i = 0; i < N; ++i) {
+        cin >> A[i];
     }
 
-    for (ll i = 0; i < n; i++) {
-        s[i + 1] = s[i] + a[i];
+    vector<int> S(N + 1);
+    for (int i = 1; i <= N; i++) {
+        S[i] = S[i - 1] + A[i - 1];
     }
     
-    vector<ll> ans(q);
-    for (ll i = 0; i < q; i++) {
-        ll l, r;
+    for (int i = 0; i < Q; i++) {
+        int l, r;
         cin >> l >> r;
-        ans[i] = s[r] - s[l - 1];
+        cout << S[r] - S[l - 1] << endl;
     }
-
-    for (ll i = 0; i < q; i++) {
-        cout << ans[i] << endl;
-    }
-    
     
 }
