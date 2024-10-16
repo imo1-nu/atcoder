@@ -8,7 +8,7 @@ int main()
     ios_base::sync_with_stdio(false);
     
     int n;
-    string s = "aa";
+    string s;
     cin >> n >> s;
     string rev(s.rbegin(), s.rend());
     
