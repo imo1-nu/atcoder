@@ -34,7 +34,7 @@ int main()
 
     for (int i = 0; i < T; i++) {
         vector<State> Candidate;
-        for (int j = 0; j < Beam[i].size(); j++) {
+        for (int j = 0; j < (int)Beam[i].size(); j++) {
             State SousaA = Beam[i][j];
             SousaA.LastMove = 'A';
             SousaA.LastPos = j;
@@ -50,9 +50,9 @@ int main()
             State SousaB = Beam[i][j];
             SousaB.LastMove = 'B';
             SousaB.LastPos = j;
-            SousaB.X[P[i]]++;
-            SousaB.X[Q[i]]++;
-            SousaB.X[R[i]]++;
+            SousaB.X[P[i]]--;
+            SousaB.X[Q[i]]--;
+            SousaB.X[R[i]]--;
             for (int k = 0; k < 20; k++) {
                 if (SousaB.X[k] == 0) {
                     SousaB.score++;
@@ -75,7 +75,7 @@ int main()
     
     int CurrentPos = 0;
     vector<char> Ans(T + 1); 
-    for (int i = T; i >= 1; i++) {
+    for (int i = T; i >= 1; i--) {
         Ans[i] = Beam[i][CurrentPos].LastMove;
         CurrentPos = Beam[i][CurrentPos].LastPos;
     }
