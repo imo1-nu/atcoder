@@ -80,5 +80,5 @@ int main()
         }
     }
     
-    // cout << myPow(2, cnt) << endl;
+    cout << myPow(2, cnt) << endl;
 }
