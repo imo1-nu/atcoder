@@ -9,20 +9,24 @@ int main()
     
     int N, Q;
     cin >> N >> Q;
-    vector<int> A(N);
+
+    vector<ll> A(N);
     for (int i = 0; i < N; ++i) {
         cin >> A[i];
     }
 
-    vector<int> S(N + 1);
-    for (int i = 1; i <= N; i++) {
-        S[i] = S[i - 1] + A[i - 1];
+    vector<ll> S(N + 1);
+    S[0] = 0;
+    for (int i = 0; i < N; ++i) {
+        S[i + 1] = S[i] + A[i];
     }
-    
+
     for (int i = 0; i < Q; i++) {
         int l, r;
         cin >> l >> r;
-        cout << S[r] - S[l - 1] << endl;
+        l--; r--;
+
+        cout << S[r + 1] - S[l] << '\n';
     }
     
 }
