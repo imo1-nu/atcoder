@@ -1,4 +1,4 @@
-ACLIB_PATH = "/home/imo1/atcoder/lib/ac-library"
+ACLIB_PATH = "/Users/futagamitakumi/atcoder/lib/ac-library"
 CXX = g++
 CXXFLAGS = -I $(ACLIB_PATH)
 
