@@ -2,29 +2,25 @@
 using namespace std;
 using ll = long long;
 
+const int INF = 1e9;
+
 int main()
 {
     cin.tie(nullptr);
     ios_base::sync_with_stdio(false);
     
-    int n;
-    cin >> n;
-    vector<int> a(n);
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
+    int N;
+    cin >> N;
+    vector<int> A(N);
+    for (int i = 0; i < N; ++i) cin >> A[i];
+
+    vector<int> dp(N + 1, INF);
+    dp[0] = 0;
+    int ans = 0;
+    for (int i = 0; i < N; i++) {
+        int j = lower_bound(dp.begin(), dp.end(), A[i]) - dp.begin();
+        dp[j] = A[i];
+        ans = max(ans, j);
     }
-    vector<int> dp(n + 1, 0);
-    vector<int> L(n + 1, 1e6);
-    L[0] = 0;
-    for (int i = 1; i <= n; i++) {
-        int k = lower_bound(L.begin(), L.end(), a[i - 1]) - L.begin() - 1;
-        dp[i] = k + 1;
-        L[dp[i]] = min(L[dp[i]], a[i - 1]);
-    }
-    int i;
-    for (i = 1; i <= n; i++) {
-        if (L[i] == 1e6) break;
-    }
-    cout << i - 1 << endl;
-    
+    cout << ans << endl;
 }
