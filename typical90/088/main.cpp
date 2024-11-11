@@ -3,37 +3,36 @@
 using namespace std;
 using ll = long long;
 
-ll N, Q;
-ll A[88], X[4000], Y[4000];
-vector<ll> G[88];
-bool used[88];
-bool counged[8889];
+int N, Q;
+int A[10007], X[10007], Y[10007];
 
-void dfs(ll u, ll sum) {
-    if (u == N) {
-        if (sum == 0) return;
-        if (counged[sum] == false) {
-            counged[sum] = true;
-        }
-        else {
-            cout << "No" << endl;
-            exit(0);
-        }
+int c[10007];
+vector<int> G[10007];
+vector<int> vec;
+vector<vector<int>> Answer[10007];
+bool flag = false;
+
+void dfs(int pos, int dep) {
+    if (flag) return;
+    if (pos == N + 1) {
+        Answer[dep].push_back(vec);
+        if (Answer[dep].size() == 2) flag = true;
+        return;
     }
 
-    if (used[u] == false) {
-        sum += A[u];
-        for (ll v : G[u]) {
-            used[v] = true;
+    dfs(pos + 1, dep);
+    
+    if (c[pos] == 0) {
+        vec.push_back(pos);
+        for (int i : G[pos]) {
+            c[i]++;
         }
-        dfs(u + 1, sum);
-        sum -= A[u];
-        for (ll v : G[u]) {
-            used[v] = false;
+        dfs(pos + 1, dep + A[pos]);
+        for (int i : G[pos]) {
+            c[i]--;
         }
+        vec.pop_back();
     }
-
-    dfs(u + 1, sum);
 }
 
 int main()
@@ -42,14 +41,34 @@ int main()
     ios_base::sync_with_stdio(false);
     
     cin >> N >> Q;
-    for (ll i = 0; i < N; i++) {
+    for (int i = 1; i <= N; i++) {
         cin >> A[i];
     }
 
-    for (ll i = 0; i < Q; i++) {
+    for (int i = 1; i <= Q; i++) {
         cin >> X[i] >> Y[i];
-        X[i]--; Y[i]--;
         G[X[i]].push_back(Y[i]);
     }
 
+    dfs(1, 0);
+
+    for (int i = 0; i <= 10000; i++) {
+        if (Answer[i].size() <= 1) continue;
+        
+        cout << Answer[i][0].size() << endl;
+        for (int j : Answer[i][0]) {
+            cout << j;
+            if (j != Answer[i][0].back()) cout << " ";
+        }
+        cout << endl;
+
+        cout << Answer[i][1].size() << endl;
+        for (int j : Answer[i][1]) {
+            cout << j;
+            if (j != Answer[i][1].back()) cout << " ";
+        }
+        cout << endl;
+
+        break;
+    }
 }
