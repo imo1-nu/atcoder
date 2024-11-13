@@ -17,19 +17,12 @@ int main()
     sort(A.begin(), A.end());
     sort(B.begin(), B.end());
     sort(C.begin(), C.end());
-    vector<int> cntBtoA(N);
-    for (int i = 0; i < N; i++) {
-        cntBtoA[i] = lower_bound(A.begin(), A.end(), B[i]) - A.begin();
-    }
-    vector<ll> cntBtoAsum(N + 1);
-    for (int i = 1; i <= N; i++) {
-        cntBtoAsum[i] = cntBtoAsum[i - 1] + cntBtoA[i - 1];
-    }
-
+    
     ll ans = 0;
     for (int i = 0; i < N; i++) {
-        int idx = lower_bound(B.begin(), B.end(), C[i]) - B.begin();
-        ans += cntBtoAsum[idx];
+        ll a = lower_bound(A.begin(), A.end(), B[i]) - A.begin();
+        ll c = C.end() - upper_bound(C.begin(), C.end(), B[i]);
+        ans += a * c;
     }
 
     cout << ans << endl;
