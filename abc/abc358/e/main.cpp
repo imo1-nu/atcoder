@@ -1,11 +1,15 @@
 #include <bits/stdc++.h>
+#include <atcoder/all>
 using namespace std;
 using ll = long long;
 
-#define mod 998244353
+using mint = atcoder::modint998244353;
 
-ll myPlus(ll a, ll b) {
-    return (a + b) % mod;
+vector<mint> P(1001);
+
+mint comb(int n, int k) {
+    if (n < k) return 0;
+    return P[n] / (P[k] * P[n - k]);
 }
 
 int main()
@@ -13,28 +17,31 @@ int main()
     cin.tie(nullptr);
     ios_base::sync_with_stdio(false);
 
-    ll k, num = 26;
-    vector<ll> c(num);
-    cin >> k;
-    for (int i = 0; i < num; i++) {
-        cin >> c[i];
-    }
-    
-    vector<vector<ll>> dp(26, vector<ll> (k + 1, 0));
-    for (int i = 0; i <= c[i] && i <= k; i++) {
-        dp[0][i] = 1;
+    int K;
+    cin >> K;
+    vector<int> C(26);
+    for (int i = 0; i < 26; i++) {
+        cin >> C[i];
     }
 
-    for (int i = 1; i < 26; i++) {
-        for (int j = 0; j <= k; j++) {
-            dp[i][j] = dp[i - 1][j];
-        }
-        
-        for (int j = 1; j <= c[i] && j <= k; j++) {
-            dp[i][j] = myPlus(dp[i][j - 1], 1ll);
-        }
-        
+    P[0] = 1;
+    for (int i = 1; i <= 1000; i++) {
+        P[i] = P[i - 1] * i;
     }
-    
-    
+
+    vector<vector<mint>> dp(27, vector<mint>(K + 1));
+    dp[0][0] = 1;
+    for (int i = 1; i <= 26; i++) {
+        for (int j = 0; j <= K; j++) {
+            for (int k = 0; k <= C[i - 1] && k <= j; k++) {
+                dp[i][j] += dp[i - 1][j - k] * comb(j, k);
+            }
+        }
+    }
+
+    mint ans = 0;
+    for (int i = 1; i <= K; i++) {
+        ans += dp[26][i];
+    }
+    cout << ans.val() << endl;
 }
