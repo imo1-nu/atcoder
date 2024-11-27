@@ -33,15 +33,15 @@ int main()
     cin >> N >> S;
 
     vector<pair<char, int>> code = encode(S);
-    int ans = 0;
+    int ans = 1;
     for (int i = 0; i < (int)code.size(); i++) {
-        if (code[i].first == '/') {
+        if (code[i].first == '/' && code[i].second == 1) {
             int l = 0, r = 0;
             if (i > 0 && code[i - 1].first == '1') {
-                l = code[i-1].second;
+                l = code[i - 1].second;
             }
             if (i + 1 < (int)code.size() && code[i + 1].first == '2') {
-                r = code[i+1].second;
+                r = code[i + 1].second;
             }
             int len = 2 * min(l, r) + 1;
             ans = max(ans, len);
