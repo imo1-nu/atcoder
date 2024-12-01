@@ -30,7 +30,7 @@ int main()
     for (int i = 0; i < N; i++) {
         int l = L[i], r = R[i];
         int h = seg.prod(l, r + 1);
-        cout << h + 1 << '\n';
+        cout << h + 1 << endl;
         seg.apply(l, r + 1, h + 1);
     }
 }
