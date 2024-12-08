@@ -10,8 +10,8 @@ int main()
     int N, Q;
     cin >> N >> Q;
 
-    vector<ll> A(N);
-    for (int i = 0; i < N; ++i) {
+    vector<int> A(N);
+    for (int i = 0; i < N; i++) {
         cin >> A[i];
     }
 
@@ -20,11 +20,10 @@ int main()
         S[i] = S[i - 1] + A[i - 1];
     }
 
-    for (int i = 0; i < Q; i++) {
-        int l, r;
-        cin >> l >> r;
-        l--;
-        cout << S[r] - S[l] << endl;
+    while (Q--) {
+        int L, R;
+        cin >> L >> R;
+        ll ans = S[R] - S[L - 1];
+        cout << ans << endl;
     }
-    
 }
