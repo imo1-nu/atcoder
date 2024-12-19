@@ -1,0 +1,64 @@
+{
+  "contest": {
+    "id": "adt_hard_20241218_3",
+    "title": "AtCoder Daily Training HARD 2024/12/18 20:00start",
+    "url": "https://atcoder.jp/contests/adt_hard_20241218_3"
+  },
+  "tasks": [
+    {
+      "id": "abc338_c",
+      "label": "E",
+      "title": "Leftover Recipes",
+      "url": "https://atcoder.jp/contests/adt_hard_20241218_3/tasks/abc338_c",
+      "directory": {
+        "path": "e",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc368_c",
+      "label": "F",
+      "title": "Triple Attack",
+      "url": "https://atcoder.jp/contests/adt_hard_20241218_3/tasks/abc368_c",
+      "directory": {
+        "path": "f",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "codequeen2024_final_d",
+      "label": "G",
+      "title": "Attend Many Events",
+      "url": "https://atcoder.jp/contests/adt_hard_20241218_3/tasks/codequeen2024_final_d",
+      "directory": {
+        "path": "g",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc226_e",
+      "label": "H",
+      "title": "Just one",
+      "url": "https://atcoder.jp/contests/adt_hard_20241218_3/tasks/abc226_e",
+      "directory": {
+        "path": "h",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc308_f",
+      "label": "I",
+      "title": "Vouchers",
+      "url": "https://atcoder.jp/contests/adt_hard_20241218_3/tasks/abc308_f",
+      "directory": {
+        "path": "i",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    }
+  ]
+}
