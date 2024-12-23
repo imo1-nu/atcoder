@@ -1,0 +1,64 @@
+{
+  "contest": {
+    "id": "adt_hard_20241219_2",
+    "title": "AtCoder Daily Training HARD 2024/12/19 18:30start",
+    "url": "https://atcoder.jp/contests/adt_hard_20241219_2"
+  },
+  "tasks": [
+    {
+      "id": "abc348_c",
+      "label": "E",
+      "title": "Colorful Beans",
+      "url": "https://atcoder.jp/contests/adt_hard_20241219_2/tasks/abc348_c",
+      "directory": {
+        "path": "e",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc352_c",
+      "label": "F",
+      "title": "Standing On The Shoulders",
+      "url": "https://atcoder.jp/contests/adt_hard_20241219_2/tasks/abc352_c",
+      "directory": {
+        "path": "f",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc254_d",
+      "label": "G",
+      "title": "Together Square",
+      "url": "https://atcoder.jp/contests/adt_hard_20241219_2/tasks/abc254_d",
+      "directory": {
+        "path": "g",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc364_e",
+      "label": "H",
+      "title": "Maximum Glutton",
+      "url": "https://atcoder.jp/contests/adt_hard_20241219_2/tasks/abc364_e",
+      "directory": {
+        "path": "h",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc338_f",
+      "label": "I",
+      "title": "Negative Traveling Salesman",
+      "url": "https://atcoder.jp/contests/adt_hard_20241219_2/tasks/abc338_f",
+      "directory": {
+        "path": "i",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    }
+  ]
+}
