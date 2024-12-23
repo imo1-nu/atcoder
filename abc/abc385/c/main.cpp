@@ -16,14 +16,13 @@ int main()
     }
 
     int ans = 1;
-    for (int d = 1; d < N; ++d) {
-        for (int i = 0; i < N; ++i) {
-            int cnt = 0;
-            for (int j = i; j < N; j += d) {
-                if (H[j] == H[i]) cnt++;
-                else break;
+    vector<vector<int>> dp(N, vector<int>(N, 1));
+    for (int i = 1; i < N; ++i) {
+        for (int d = 1; d <= i; ++d) {
+            if (H[i - d] == H[i]) {
+                dp[i][d] = dp[i - d][d] + 1;
+                ans = max(ans, dp[i][d]);
             }
-            ans = max(ans, cnt);
         }
     }
     cout << ans << endl;
