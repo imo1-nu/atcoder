@@ -1,0 +1,64 @@
+{
+  "contest": {
+    "id": "adt_hard_20241219_1",
+    "title": "AtCoder Daily Training HARD 2024/12/19 16:30start",
+    "url": "https://atcoder.jp/contests/adt_hard_20241219_1"
+  },
+  "tasks": [
+    {
+      "id": "abc287_c",
+      "label": "E",
+      "title": "Path Graph?",
+      "url": "https://atcoder.jp/contests/adt_hard_20241219_1/tasks/abc287_c",
+      "directory": {
+        "path": "e",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc370_c",
+      "label": "F",
+      "title": "Word Ladder",
+      "url": "https://atcoder.jp/contests/adt_hard_20241219_1/tasks/abc370_c",
+      "directory": {
+        "path": "f",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc221_d",
+      "label": "G",
+      "title": "Online games",
+      "url": "https://atcoder.jp/contests/adt_hard_20241219_1/tasks/abc221_d",
+      "directory": {
+        "path": "g",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc291_e",
+      "label": "H",
+      "title": "Find Permutation",
+      "url": "https://atcoder.jp/contests/adt_hard_20241219_1/tasks/abc291_e",
+      "directory": {
+        "path": "h",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc269_f",
+      "label": "I",
+      "title": "Numbered Checker",
+      "url": "https://atcoder.jp/contests/adt_hard_20241219_1/tasks/abc269_f",
+      "directory": {
+        "path": "i",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    }
+  ]
+}

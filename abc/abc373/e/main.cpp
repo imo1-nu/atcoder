@@ -8,69 +8,52 @@ int main()
     cin.tie(nullptr);
     ios_base::sync_with_stdio(false);
     
-    ll N, M, K;
+    int N, M;
+    ll K;
     cin >> N >> M >> K;
-    vector<ll> A(N);
-    ll sum = 0;
+    vector<pair<ll, int>> P(N);
     for (int i = 0; i < N; ++i) {
-        cin >> A[i];
-        sum += A[i];
+        cin >> P[i].first;
+        P[i].second = i;
     }
-
-    vector<ll> sortedA = A;
+    sort(P.begin(), P.end());
     vector<ll> S(N + 1);
-    for (int i = 0; i < N; ++i) {
-        S[i + 1] = S[i] + sortedA[i];
+    for (int i = 1; i <= N; ++i) {
+        S[i] = S[i - 1] + P[i - 1].first;
     }
 
-    for (int i = 0; i < N; i++) {
-        if (N == M) {
+    if (N == M) {
+        for (int i = 0; i < N; ++i) {
             cout << 0 << ' ';
-            continue;
         }
+        cout << endl;
+        return 0;
+    }
 
-        ll left = 0;
-        ll right = K - sum;
-        if (A[i] + right < sortedA[N - M]) {
-            cout << -1 << ' ';
-            continue;
-        }
-
-        auto itr = upper_bound(sortedA.begin(), sortedA.end(), A[i]);
-        ll idx = itr - sortedA.begin() - 1;
-        
-        right++;
-        if (idx < N - M) {
-            while (left + 1 < right) {
-                ll mid = (left + right) / 2;
-                ll nokori = K - sum - mid;
-                ll border = A[i] + mid;
-                int idx1 = upper_bound(sortedA.begin(), sortedA.end(), border) - sortedA.begin();
-                ll hituyou = (idx1 - (N - M)) * (border + 1) - (S[idx1] - S[N - M]);
-                if (hituyou <= nokori) {
-                    right = mid;
-                }
-                else {
-                    left = mid;
-                }
+    vector<ll> ans(N);
+    for (int i = 0; i < N; ++i) {
+        ll l = -1, r = K - S[N] + 1;
+        while (l + 1 < r) {
+            ll m = (l + r) / 2;
+            ll bd = P[i].first + m + 1;
+            int idx1 = N - M;
+            if (i >= N - M) idx1--;
+            int idx2 = lower_bound(P.begin(), P.end(), make_pair(bd, 0)) - P.begin();
+            ll cnt = 0;
+            if (idx1 < idx2) cnt += bd * (idx2 - idx1) - (S[idx2] - S[idx1]);
+            if (idx1 <= i && i < idx2) cnt--;
+            else cnt += m;
+            if (cnt <= K - S[N]) {
+                l = m;
+            } else {
+                r = m;
             }
         }
-        else {
-            while (left + 1 < right) {
-                ll mid = (left + right) / 2;
-                ll nokori = K - sum - mid;
-                ll border = A[i] + mid;
-                int idx1 = upper_bound(sortedA.begin(), sortedA.end(), border) - sortedA.begin();
-                ll hituyou = (idx1 - (N - M - 1)) * (border + 1) - (S[idx1] - S[N - M - 1]) - (mid + 1);
-                if (hituyou <= nokori) {
-                    right = mid;
-                }
-                else {
-                    left = mid;
-                }
-            }
-        }
-        cout << left << ' ';
+        if (r == K - S[N] + 1) ans[P[i].second] = -1;
+        else ans[P[i].second] = r;
+    }
+    for (int i = 0; i < N; ++i) {
+        cout << ans[i] << ' ';
     }
     cout << endl;
 }

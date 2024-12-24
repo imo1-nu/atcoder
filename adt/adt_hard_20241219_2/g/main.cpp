@@ -21,14 +21,14 @@ int main()
         }
     }
 
-    map<int, int> mp;
+   vector<int> cnt(N + 1);
     for (int i = 1; i <= N; ++i) {
-        mp[i / f[i]]++;
+        cnt[i / f[i]]++;
     }
     
     int ans = 0;
-    for (auto [k, v] : mp) {
-        ans += v * v;
+    for (int i = 1; i <= N; ++i) {
+        ans += cnt[i] * cnt[i];
     }
     cout << ans << endl;
 }
