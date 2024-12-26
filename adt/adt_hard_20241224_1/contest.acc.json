@@ -1,0 +1,64 @@
+{
+  "contest": {
+    "id": "adt_hard_20241224_1",
+    "title": "AtCoder Daily Training HARD 2024/12/24 15:30start",
+    "url": "https://atcoder.jp/contests/adt_hard_20241224_1"
+  },
+  "tasks": [
+    {
+      "id": "abc346_c",
+      "label": "E",
+      "title": "Σ",
+      "url": "https://atcoder.jp/contests/adt_hard_20241224_1/tasks/abc346_c",
+      "directory": {
+        "path": "e",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc323_c",
+      "label": "F",
+      "title": "World Tour Finals",
+      "url": "https://atcoder.jp/contests/adt_hard_20241224_1/tasks/abc323_c",
+      "directory": {
+        "path": "f",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc268_d",
+      "label": "G",
+      "title": "Unique Username",
+      "url": "https://atcoder.jp/contests/adt_hard_20241224_1/tasks/abc268_d",
+      "directory": {
+        "path": "g",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc354_e",
+      "label": "H",
+      "title": "Remove Pairs",
+      "url": "https://atcoder.jp/contests/adt_hard_20241224_1/tasks/abc354_e",
+      "directory": {
+        "path": "h",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc223_f",
+      "label": "I",
+      "title": "Parenthesis Checking",
+      "url": "https://atcoder.jp/contests/adt_hard_20241224_1/tasks/abc223_f",
+      "directory": {
+        "path": "i",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    }
+  ]
+}
