@@ -1,0 +1,64 @@
+{
+  "contest": {
+    "id": "adt_hard_20250107_1",
+    "title": "AtCoder Daily Training HARD 2025/01/07 15:30start",
+    "url": "https://atcoder.jp/contests/adt_hard_20250107_1"
+  },
+  "tasks": [
+    {
+      "id": "abc242_c",
+      "label": "E",
+      "title": "1111gal password",
+      "url": "https://atcoder.jp/contests/adt_hard_20250107_1/tasks/abc242_c",
+      "directory": {
+        "path": "e",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc256_c",
+      "label": "F",
+      "title": "Filling 3x3 array",
+      "url": "https://atcoder.jp/contests/adt_hard_20250107_1/tasks/abc256_c",
+      "directory": {
+        "path": "f",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc255_d",
+      "label": "G",
+      "title": "±1 Operation 2",
+      "url": "https://atcoder.jp/contests/adt_hard_20250107_1/tasks/abc255_d",
+      "directory": {
+        "path": "g",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc224_e",
+      "label": "H",
+      "title": "Integers on Grid",
+      "url": "https://atcoder.jp/contests/adt_hard_20250107_1/tasks/abc224_e",
+      "directory": {
+        "path": "h",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc369_f",
+      "label": "I",
+      "title": "Gather Coins",
+      "url": "https://atcoder.jp/contests/adt_hard_20250107_1/tasks/abc369_f",
+      "directory": {
+        "path": "i",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    }
+  ]
+}
