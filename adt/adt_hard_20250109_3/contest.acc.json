@@ -1,0 +1,64 @@
+{
+  "contest": {
+    "id": "adt_hard_20250109_3",
+    "title": "AtCoder Daily Training HARD 2025/01/09 20:30start",
+    "url": "https://atcoder.jp/contests/adt_hard_20250109_3"
+  },
+  "tasks": [
+    {
+      "id": "abc240_c",
+      "label": "E",
+      "title": "Jumping Takahashi",
+      "url": "https://atcoder.jp/contests/adt_hard_20250109_3/tasks/abc240_c",
+      "directory": {
+        "path": "e",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc276_c",
+      "label": "F",
+      "title": "Previous Permutation",
+      "url": "https://atcoder.jp/contests/adt_hard_20250109_3/tasks/abc276_c",
+      "directory": {
+        "path": "f",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc259_d",
+      "label": "G",
+      "title": "Circumferences",
+      "url": "https://atcoder.jp/contests/adt_hard_20250109_3/tasks/abc259_d",
+      "directory": {
+        "path": "g",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc271_e",
+      "label": "H",
+      "title": "Subsequence Path",
+      "url": "https://atcoder.jp/contests/adt_hard_20250109_3/tasks/abc271_e",
+      "directory": {
+        "path": "h",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc345_f",
+      "label": "I",
+      "title": "Many Lamps",
+      "url": "https://atcoder.jp/contests/adt_hard_20250109_3/tasks/abc345_f",
+      "directory": {
+        "path": "i",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    }
+  ]
+}
