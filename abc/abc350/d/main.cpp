@@ -9,30 +9,34 @@ int main()
     
     int N, M;
     cin >> N >> M;
-    vector<vector<int>> C(N);
+    vector<vector<int>> G(N);
     for (int i = 0; i < M; i++) {
         int a, b;
         cin >> a >> b;
-        C[a].push_back(b);
-        C[b].push_back(a);
+        a--; b--;
+        G[a].push_back(b);
+        G[b].push_back(a);
     }
 
     vector<bool> seen(N, false);
-    queue<int> bfs;
-    int ans = 0;
+    queue<int> q;
+    ll ans = 0;
     for (int i = 0; i < N; i++) {
         if (seen[i] == true) continue;
-        bfs.push(i);
-        int node_num = 0;
-        int edge_num = 0;
-        while (!bfs.empty()) {
-            int j = bfs.front();
-            bfs.pop();
-            node_num++;
-            while (!C[i].empty()) {
-                int c = C[i][0];
+        seen[i] = true;
+        q.push(i);
+        ll cnt = 1;
+        while (!q.empty()) {
+            int j = q.front();
+            q.pop();
+            for (int k : G[j]) {
+                if (seen[k] == true) continue;
+                seen[k] = true;
+                q.push(k);
+                cnt++;
             }
         }
-        seen[i] = true;
+        ans += cnt * (cnt - 1) / 2;
     }
+    cout << ans - M << endl;
 }
