@@ -1,7 +1,0 @@
-{
-    "name": "x",
-    "private":true,
-    "scripts": {
-        "s": "acc s main.cpp"
-    }
-}
