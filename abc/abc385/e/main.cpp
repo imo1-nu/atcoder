@@ -21,14 +21,14 @@ int main()
 
     int ans = N;
     for (int i = 0; i < N; ++i) {
-        vector<int> div(G[i].size());
+        vector<int> deg(G[i].size());
         for (int j = 0; j < (int)G[i].size(); ++j) {
             int v = G[i][j];
-            div[j] = (int)G[v].size();
+            deg[j] = (int)G[v].size();
         }
-        sort(div.rbegin(), div.rend());
-        for (int x = 1; x <= (int)div.size(); ++x) {
-            int y = div[x - 1] - 1;
+        sort(deg.rbegin(), deg.rend());
+        for (int x = 1; x <= (int)deg.size(); ++x) {
+            int y = deg[x - 1] - 1;
             ans = min(ans, N - 1 - x - x * y);
         }
     }

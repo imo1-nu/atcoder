@@ -9,6 +9,8 @@ int main()
 {
     cin.tie(nullptr);
     ios_base::sync_with_stdio(false);
+
+    cout << "Please input the code snippet and end with 'end'." << endl;
     
     char buf[BUF];
     vector<string> A(MAXN);
