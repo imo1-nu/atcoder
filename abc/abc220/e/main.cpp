@@ -17,8 +17,17 @@ int main() {
         pow2[i] = pow2[i - 1] * 2;
     }
 
-    vector<mint> f(N);
-    for (int i = 1; i < N - D; i++) {
-        f[i] = pow2[D + 1];
+    mint ans = 0;
+    for (int d = 0; d < N; d++) {
+        mint f1, f2;
+        if (d + D < N) f1 = pow2[D + 1];
+        else f1 = 0;
+
+        if (2 * (N - 1 - d) < D || D == 1) f2 = 0;
+        else if (d + D < N) f2 = pow2[D - 1] * (D - 1);
+        else f2 = pow2[D - 1] * (2 * N - 2 * d - D - 1);
+        
+        ans += pow2[d] * (f1 + f2);
     }
+    cout << ans.val() << endl;
 }
