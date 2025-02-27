@@ -1,0 +1,64 @@
+{
+  "contest": {
+    "id": "adt_hard_20250225_1",
+    "title": "AtCoder Daily Training HARD 2025/02/25 15:30start",
+    "url": "https://atcoder.jp/contests/adt_hard_20250225_1"
+  },
+  "tasks": [
+    {
+      "id": "abc343_c",
+      "label": "E",
+      "title": "343",
+      "url": "https://atcoder.jp/contests/adt_hard_20250225_1/tasks/abc343_c",
+      "directory": {
+        "path": "e",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc283_c",
+      "label": "F",
+      "title": "Cash Register",
+      "url": "https://atcoder.jp/contests/adt_hard_20250225_1/tasks/abc283_c",
+      "directory": {
+        "path": "f",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc336_d",
+      "label": "G",
+      "title": "Pyramid",
+      "url": "https://atcoder.jp/contests/adt_hard_20250225_1/tasks/abc336_d",
+      "directory": {
+        "path": "g",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc359_e",
+      "label": "H",
+      "title": "Water Tank",
+      "url": "https://atcoder.jp/contests/adt_hard_20250225_1/tasks/abc359_e",
+      "directory": {
+        "path": "h",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc215_f",
+      "label": "I",
+      "title": "Dist Max 2",
+      "url": "https://atcoder.jp/contests/adt_hard_20250225_1/tasks/abc215_f",
+      "directory": {
+        "path": "i",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    }
+  ]
+}
