@@ -1,0 +1,196 @@
+{
+  "contest": {
+    "id": "nupc2024",
+    "title": "NUPC 2024",
+    "url": "https://atcoder.jp/contests/nupc2024"
+  },
+  "tasks": [
+    {
+      "id": "nupc2024_a",
+      "label": "A",
+      "title": "Equalization",
+      "url": "https://atcoder.jp/contests/nupc2024/tasks/nupc2024_a",
+      "directory": {
+        "path": "a",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "nupc2024_b",
+      "label": "B",
+      "title": "おつり",
+      "url": "https://atcoder.jp/contests/nupc2024/tasks/nupc2024_b",
+      "directory": {
+        "path": "b",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "nupc2024_c",
+      "label": "C",
+      "title": "Median of Medians",
+      "url": "https://atcoder.jp/contests/nupc2024/tasks/nupc2024_c",
+      "directory": {
+        "path": "c",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "nupc2024_d",
+      "label": "D",
+      "title": "Painting",
+      "url": "https://atcoder.jp/contests/nupc2024/tasks/nupc2024_d",
+      "directory": {
+        "path": "d",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "nupc2024_e",
+      "label": "E",
+      "title": "Exponential",
+      "url": "https://atcoder.jp/contests/nupc2024/tasks/nupc2024_e",
+      "directory": {
+        "path": "e",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "nupc2024_f",
+      "label": "F",
+      "title": "Labeled Tree Distance",
+      "url": "https://atcoder.jp/contests/nupc2024/tasks/nupc2024_f",
+      "directory": {
+        "path": "f",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "nupc2024_g",
+      "label": "G",
+      "title": "Super 累積 XOR",
+      "url": "https://atcoder.jp/contests/nupc2024/tasks/nupc2024_g",
+      "directory": {
+        "path": "g",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "nupc2024_h",
+      "label": "H",
+      "title": "LCS order",
+      "url": "https://atcoder.jp/contests/nupc2024/tasks/nupc2024_h",
+      "directory": {
+        "path": "h",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "nupc2024_i",
+      "label": "I",
+      "title": "Eat and Build",
+      "url": "https://atcoder.jp/contests/nupc2024/tasks/nupc2024_i",
+      "directory": {
+        "path": "i",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "nupc2024_j",
+      "label": "J",
+      "title": "Cops and Robbers on Namori",
+      "url": "https://atcoder.jp/contests/nupc2024/tasks/nupc2024_j",
+      "directory": {
+        "path": "j",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "nupc2024_k",
+      "label": "K",
+      "title": "A Shortcut",
+      "url": "https://atcoder.jp/contests/nupc2024/tasks/nupc2024_k",
+      "directory": {
+        "path": "k",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "nupc2024_l",
+      "label": "L",
+      "title": "Move It 2",
+      "url": "https://atcoder.jp/contests/nupc2024/tasks/nupc2024_l",
+      "directory": {
+        "path": "l",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "nupc2024_m",
+      "label": "M",
+      "title": "NUPaCking",
+      "url": "https://atcoder.jp/contests/nupc2024/tasks/nupc2024_m",
+      "directory": {
+        "path": "m",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "nupc2024_n",
+      "label": "N",
+      "title": "しゃくとり on Namori",
+      "url": "https://atcoder.jp/contests/nupc2024/tasks/nupc2024_n",
+      "directory": {
+        "path": "n",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "nupc2024_o",
+      "label": "O",
+      "title": "LRUD Maze",
+      "url": "https://atcoder.jp/contests/nupc2024/tasks/nupc2024_o",
+      "directory": {
+        "path": "o",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "nupc2024_p",
+      "label": "P",
+      "title": "偶数けんけん",
+      "url": "https://atcoder.jp/contests/nupc2024/tasks/nupc2024_p",
+      "directory": {
+        "path": "p",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "nupc2024_q",
+      "label": "Q",
+      "title": "Stablest Permutation",
+      "url": "https://atcoder.jp/contests/nupc2024/tasks/nupc2024_q",
+      "directory": {
+        "path": "q",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    }
+  ]
+}
