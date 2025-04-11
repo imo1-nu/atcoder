@@ -1,0 +1,64 @@
+{
+  "contest": {
+    "id": "adt_hard_20250410_3",
+    "title": "AtCoder Daily Training HARD 2025/04/10 20:30start",
+    "url": "https://atcoder.jp/contests/adt_hard_20250410_3"
+  },
+  "tasks": [
+    {
+      "id": "abc369_c",
+      "label": "E",
+      "title": "Count Arithmetic Subarrays",
+      "url": "https://atcoder.jp/contests/adt_hard_20250410_3/tasks/abc369_c",
+      "directory": {
+        "path": "e",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc337_c",
+      "label": "F",
+      "title": "Lining Up 2",
+      "url": "https://atcoder.jp/contests/adt_hard_20250410_3/tasks/abc337_c",
+      "directory": {
+        "path": "f",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc266_d",
+      "label": "G",
+      "title": "Snuke Panic (1D)",
+      "url": "https://atcoder.jp/contests/adt_hard_20250410_3/tasks/abc266_d",
+      "directory": {
+        "path": "g",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc255_e",
+      "label": "H",
+      "title": "Lucky Numbers",
+      "url": "https://atcoder.jp/contests/adt_hard_20250410_3/tasks/abc255_e",
+      "directory": {
+        "path": "h",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc391_f",
+      "label": "I",
+      "title": "K-th Largest Triplet ",
+      "url": "https://atcoder.jp/contests/adt_hard_20250410_3/tasks/abc391_f",
+      "directory": {
+        "path": "i",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    }
+  ]
+}
