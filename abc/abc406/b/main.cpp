@@ -7,19 +7,21 @@ int main() {
     cin.tie(nullptr);
     ios_base::sync_with_stdio(false);
     
-    int N;
-    cin >> N;
+    int N, K;
+    cin >> N >> K;
     vector<ll> A(N);
     for (int i = 0; i < N; i++) {
         cin >> A[i];
     }
-    atcoder::fenwick_tree<ll> fw(N);
-    for (int i = 0; i < N; i++) {
-        fw.add(i, A[i]);
+    ll K10 = 1;
+    for (int i = 0; i < K; i++) {
+        K10 *= 10;
     }
-    ll ans = 0;
+
+    ll ans = 1;
     for (int i = 0; i < N; i++) {
-        ans += A[i] * fw.sum(0, i);
+        if (ans < (K10 + A[i] - 1) / A[i]) ans *= A[i];
+        else ans = 1;
     }
     cout << ans << endl;
 }

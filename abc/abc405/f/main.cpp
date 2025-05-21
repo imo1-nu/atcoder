@@ -3,37 +3,49 @@
 using namespace std;
 using ll = long long;
 
+int op(int a, int b) {
+    return a + b;
+}
+int e() {
+    return 0;
+}
+
 int main() {
     cin.tie(nullptr);
     ios_base::sync_with_stdio(false);
     
     int N, M;
     cin >> N >> M;
-    vector<int> A(M), B(M);
+    vector<int> A(M), B(M), P(N * 2, -1);
     for (int i = 0; i < M; i++) {
         cin >> A[i] >> B[i];
+        A[i]--;
+        B[i]--;
+        P[A[i]] = i;
+        P[B[i]] = i;
     }
-    
-    atcoder::fenwick_tree<int> fw_A(2 * N + 1), fw_B(2 * N + 1);
-    for (int i = 0; i < M; i++) {
-        fw_A.add(A[i], 1);
-        fw_B.add(B[i], 1);
-    }
-
-    vector<int> zero(2 * N + 1, 2 * N);
-    for (int i = 2 * N - 1; i >= 0; i--) {
-        if (fw_A.sum(0, i + 1) == fw_B.sum(0, i + 1)) zero[i] = i;
-        else zero[i] = zero[i + 1];
-    }
-
+    atcoder::segtree<int, op, e> seg(N * 2);
     int Q;
     cin >> Q;
-    while (Q--) {
-        int c, d;
-        cin >> c >> d;
-        int ans = 0;
-        if (zero[c] < d) ans += fw_B.sum(c, zero[c] + 1) - fw_A.sum(c, zero[c] + 1);
-        ans += fw_B.sum(c, zero[d] + 1) - fw_A.sum(c, zero[d] + 1);
-        cout << ans << endl;
+    vector<int> C(Q), D(Q);
+    vector<vector<int>> G(N * 2);
+    for (int i = 0; i < Q; i++) {
+        cin >> C[i] >> D[i];
+        C[i]--;
+        D[i]--;
+        G[D[i]].emplace_back(i);
+    }
+
+    vector<int> ans(Q);
+    for (int i = 0; i < N * 2; i++) {
+        if (P[i] != -1) {
+            seg.set(i, 1);
+            if (B[P[i]] == i) seg.set(A[P[i]], -1);
+        }
+        for (auto x : G[i]) ans[x] = seg.prod(C[x], D[x] + 1);
+    }
+
+    for (int i = 0; i < Q; i++) {
+        cout << ans[i] << endl;
     }
 }
