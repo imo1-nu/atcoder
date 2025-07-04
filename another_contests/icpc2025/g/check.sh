@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # コンパイル
-g++ main.cpp
+g++ -I "/Users/futagamitakumi/atcoder/lib/ac-library" main.cpp
 
 # テストケースの数を自動検出
 n=0

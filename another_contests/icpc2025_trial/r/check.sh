@@ -1,3 +1,8 @@
+#!/bin/bash
+
+# コンパイル
+g++ main.cpp
+
 # テストケースの数を自動検出
 n=0
 for file in *.in; do
@@ -34,7 +39,7 @@ for i in $(seq 1 $n); do
     echo "=== テストケース $i ==="
     
     # プログラムを実行
-    actual_output=$(pytho -m atcoder main.py < "$input_file")
+    actual_output=$(./a.out < "$input_file")
     expected_output=$(cat "$expected_file")
     
     # 出力を比較
