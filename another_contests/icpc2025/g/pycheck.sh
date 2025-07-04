@@ -34,7 +34,8 @@ for i in $(seq 1 $n); do
     echo "=== テストケース $i ==="
     
     # プログラムを実行
-    actual_output=$(python -m atcoder main.py < "$input_file")
+    python -m atcoder main.py -o combined.py
+    actual_output=$(python combined.py < "$input_file")
     expected_output=$(cat "$expected_file")
     
     # 出力を比較
