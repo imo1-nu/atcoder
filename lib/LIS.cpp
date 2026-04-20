@@ -18,6 +18,6 @@ int LIS(const vector<ll> &a) {
 int main() {
     int N; cin >> N;
     vector<ll> a(N);
-    for (int i = 0; i < N; ++i) cin >> a[i];
+    for (int i = 0; i < N; i++) cin >> a[i];
     cout << LIS(a) << endl;
 }   

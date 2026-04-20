@@ -6,33 +6,33 @@ using ll = long long;
 
 struct SegTree {
     vector<ll> tree;
-    ll left, right;
+    int left, right;
     SegTree(vector<ll> a) {
-        ll size = a.size();
-        ll i;
+        int size = a.size();
+        int i;
         for (i = 0; (1ll << i) < size; i++) {}
         vector<ll> tree((1ll << i + 1) + 1);
         left = (1ll << i);
         right = left + size;
-        for (ll j = 0; j < size; j++) {
+        for (int j = 0; j < size; j++) {
             tree[left + j] = a[j];
         }
         setting(left);
     }
 
-    ll parent(ll a, ll b) { //親の作り方
+    int parent(int a, int b) { //親の作り方
         return min(a, b);
     }
     
-    void setting(ll length) {
+    void setting(int length) {
         if (length == 1) return;
-        for (ll i = length; i < 2 * length; i += 2) {
+        for (int i = length; i < 2 * length; i += 2) {
             tree[i / 2] = parent(tree[i], tree[i + 1]); 
         }
         return setting(length / 2);
     }
 
-    void update(ll index, ll x) {
+    void update(int index, ll x) {
         index += left;
         tree[index] = x;
         while (index > 1) {
@@ -41,13 +41,13 @@ struct SegTree {
         }
     }
 
-    ll query(ll l, ll r) {
+    ll query(int l, int r) {
         return query2(l, r, 0, right - left, 1);
     }
 
     ll all() {
-        ll j = 2;
-        for (ll i = 1; i < right; i++) {
+        int j = 2;
+        for (int i = 1; i < right; i++) {
             if (i == j) {
                 cout << endl;
                 j *= 2;
@@ -58,7 +58,7 @@ struct SegTree {
     }
 
 private:
-    ll query2(ll l, ll r, ll a, ll b, ll u) { //[l, r)は求めたい半区間，[a, b)はセルに対応する半区間，uは現在のセル番号
+    ll query2(int l, int r, int a, int b, int u) { //[l, r)は求めたい半区間，[a, b)はセルに対応する半区間，uは現在のセル番号
 
         //考えようとしている区間が、[a,b)に全く含まれないなら、ll_MAXを返して、操作に影響しないようにする。
         if (a >= right || b <= left) return ll_MAX;
@@ -73,7 +73,7 @@ private:
     }
 };
 
-ll main()
+int main()
 {
     cin.tie(nullptr);
     ios_base::sync_with_stdio(false);
