@@ -5,8 +5,9 @@ using namespace std;
 struct UnionFind {
     vector<int> par;
     vector<int> size;
+    int group_num;
     
-    UnionFind(int N) : par(N), size(N) {
+    UnionFind(int N) : par(N), size(N, 1), group_num(N) {
         for(int i = 0; i < N; i++) par[i] = i;
     }
     
@@ -27,5 +28,6 @@ struct UnionFind {
             par[ry] = rx;
             size[rx] += size[ry];
         }
+        group_num--;
     }
 };
