@@ -20,7 +20,7 @@ struct SegTree {
         setting(left);
     }
 
-    int parent(int a, int b) { //親の作り方
+    int parent(ll a, ll b) { //親の作り方
         return min(a, b);
     }
     
@@ -45,7 +45,7 @@ struct SegTree {
         return query2(l, r, 0, right - left, 1);
     }
 
-    ll all() {
+    void all() {
         int j = 2;
         for (int i = 1; i < right; i++) {
             if (i == j) {
@@ -54,7 +54,7 @@ struct SegTree {
             }
             cout << tree[i] << ' ';
         }
-        
+        cout << endl;
     }
 
 private:
